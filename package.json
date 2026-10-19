@@ -1,0 +1,28 @@
+{
+  "name": "image-compressor-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build && node scripts/prerender-seo.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "dev:pages": "npm run build && wrangler pages dev dist",
+    "deploy:cloudflare": "npm run build && wrangler pages deploy dist --project-name squeeze-studio"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "wrangler": "^4.31.0"
+  }
+}
+

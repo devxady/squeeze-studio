@@ -1,0 +1,10 @@
+# Copy this file to .dev.vars for local Pages Functions development.
+# Separate authorized keys with commas or new lines.
+TINIFY_API_KEYS=put-your-authorized-key-here
+
+# Optional when the frontend is hosted on another domain.
+# Use the exact origin, without a trailing slash.
+ALLOWED_ORIGINS=
+
+# Optional server-side limit for each image. Default: 20 MB.
+MAX_UPLOAD_MB=20
